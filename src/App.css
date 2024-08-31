@@ -17,7 +17,7 @@ body{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 830px;
   padding: 0;
   margin: 0;
   background-color: #130425;
@@ -25,9 +25,9 @@ body{
 }
 .Image-container {
   position: relative;
-  width: 654px; /* Ensure the container is the same size as the images */
-  height: 654px;
-  top: -66px;
+  width: 634px; /* Ensure the container is the same size as the images */
+  height: 634px;
+  top: -96px;
   z-index: 2;
   overflow: hidden;
 }
@@ -39,10 +39,10 @@ body{
 .Bottom-header{
   z-index: 221;
   position: absolute;
-  top: 105.98px;
+  top: 85.98px;
   font-family: 'Bebas Neue';
   bottom: 0;
-  font-size: 49px;
+  font-size: 46px;
   letter-spacing: 1.7px;
   line-height: 59.78px;
   font-weight: 400;
@@ -51,9 +51,8 @@ body{
 }
 .Top-header{
   z-index: 222;
-  font-size: 50px;
   object-fit: cover;
-  top: -2.75px;
+  top: -18.75px;
   
 }
 
@@ -85,7 +84,7 @@ body{
 .App-button {
   width: 252px;
   height: 67px;
-  margin-top: -137px;
+  margin-top: -217px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 6000;
@@ -109,7 +108,7 @@ body{
   display: flex;
   width: 209px;
   margin: auto;
-  margin-top: 32px;
+  margin-top: 52px;
   justify-content: space-between;
 }
 .links a{
@@ -125,7 +124,7 @@ body{
 .App-link{
   width: 252px;
   height: 67px;
-  margin-top: -137px;
+  margin-top: -217px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 666;
@@ -184,8 +183,8 @@ body{
     height: 654px;
   }
   .App-overlay{
-    width: 654px;
-    height: 654px;
+    width: 634px;
+    height: 634px;
     position: absolute;
     top: 50%; /* Adjust this value to set the vertical position */
     left: 50%; /* Adjust this value to set the horizontal position */
@@ -217,26 +216,26 @@ body{
   }
 }
 
-
 /*PHONE*/
 @media only screen and (max-width: 767px) {
   body{
     background-image: url('./bg_phone.png');
-    height: 812px;
+    height: 632px;
     width: 100vw;
     min-height: 100vh;
   }
   .App{
-    height: 812px;
+    height: 632px;
     width: 100vw;
   }
   .Top-header{
     object-fit: fill;
-    content: url('./top_header_mobile.svg')
+    content: url('./top_header_mobile.svg');
+    width: 95%;
     
   }
   .Bottom-header{
-    margin-top: -29px;
+    margin-top: -9px;
     font-size: 26.39px;
     text-align: center;
     letter-spacing: 1.3px;
@@ -245,12 +244,12 @@ body{
   .Image-container{
     width: 346.46px;
     height: 346.46px;
-    top: 298px;
+    top: 155px;
   }
   .App-overlay {
   position: absolute;
   top: 50%; /* Adjust this value to set the vertical position */
-  left: 50%; /* Adjust this value to set the horizontal position */
+  left: 51%; /* Adjust this value to set the horizontal position */
   transform: translate(-50%, -50%); /* Center the image within the container */
   pointer-events: none;
   z-index: 3; /* Ensure the overlay is on top of other elements */
@@ -261,7 +260,7 @@ body{
 
 }
 .App-button{
-  margin-top: 263px;
+  margin-top: 86px;
   width: 133.5px;
   height: 35.49px;
   line-height: normal;
@@ -271,7 +270,7 @@ body{
   z-index: 6000;
 }
 .App-link{
-  margin-top: 263px;
+  margin-top: 86px;
   width: 133.5px;
   height: 35.49px;
   line-height: normal;
