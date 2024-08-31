@@ -23,7 +23,7 @@ function App() {
 
   // Function to handle spin
   const handleSpin = () => {
-    const degreesArray = [45, 90, 137, 181, 225, 270, 360]; // Array of possible degrees
+    const degreesArray = [135]; // Array of possible degrees
     const randomIndex = Math.floor(Math.random() * degreesArray.length); // Get a random index
     const degrees = degreesArray[randomIndex]; // Get the degree from the array
     const newRotation = rotation + degrees;
