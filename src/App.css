@@ -25,8 +25,11 @@ body{
 }
 .Image-container {
   position: relative;
-  width: 634px; /* Ensure the container is the same size as the images */
-  height: 634px;
+
+  width: 634px; /* New width */
+  height: 634px; 
+
+  
   top: -96px;
   z-index: 2;
   overflow: hidden;
@@ -84,7 +87,7 @@ body{
 .App-button {
   width: 252px;
   height: 67px;
-  margin-top: -217px;
+  margin-top: -207px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 6000;
@@ -124,7 +127,7 @@ body{
 .App-link{
   width: 252px;
   height: 67px;
-  margin-top: -217px;
+  margin-top: -207px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 666;
@@ -183,11 +186,11 @@ body{
     height: 654px;
   }
   .App-overlay{
-    width: 634px;
-    height: 634px;
+    width: 654px;
+    height: 654px;
     position: absolute;
     top: 50%; /* Adjust this value to set the vertical position */
-    left: 50%; /* Adjust this value to set the horizontal position */
+    left: 51%; /* Adjust this value to set the horizontal position */
     transform: translate(-50%, -50%); /* Center the image within the container */
     pointer-events: none;
     z-index: 3; /* Ensure the overlay is on top of other elements */
@@ -231,7 +234,6 @@ body{
   .Top-header{
     object-fit: fill;
     content: url('./top_header_mobile.svg');
-    width: 95%;
     
   }
   .Bottom-header{
@@ -242,9 +244,9 @@ body{
     line-height: 31.67px;
   }
   .Image-container{
-    width: 346.46px;
-    height: 346.46px;
-    top: 155px;
+    width: 384.46px;
+    height: 384.46px;
+    top: 140px;
   }
   .App-overlay {
   position: absolute;
@@ -260,7 +262,7 @@ body{
 
 }
 .App-button{
-  margin-top: 86px;
+  margin-top: 76px;
   width: 133.5px;
   height: 35.49px;
   line-height: normal;
@@ -270,7 +272,7 @@ body{
   z-index: 6000;
 }
 .App-link{
-  margin-top: 86px;
+  margin-top: 76px;
   width: 133.5px;
   height: 35.49px;
   line-height: normal;

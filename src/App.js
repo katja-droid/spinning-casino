@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from './wheel_BG.svg'; // Wheel image to prioritize
+import logo from './wheel_BG.png'; // Wheel image to prioritize
 import top_header from './top_header.png';
 import overlay from './arrow.png';
 import leftImage from './left-image.png'; // New left-side image
@@ -23,10 +23,10 @@ function App() {
 
   // Function to handle spin
   const handleSpin = () => {
-    const degreesArray = [44, 89, 134, 180, 224, 269, 359]; // Array of possible degrees
+    const degreesArray = [45, 90, 137, 181, 225, 270, 360]; // Array of possible degrees
     const randomIndex = Math.floor(Math.random() * degreesArray.length); // Get a random index
     const degrees = degreesArray[randomIndex]; // Get the degree from the array
-    const newRotation = rotation + 360 + degrees;
+    const newRotation = rotation + degrees;
     setRotation(newRotation);
     setIsButtonDisabled(true); // Disable the button after clicking
 
