@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Take your prize</title>
+	<style type="text/css">
+		@font-face {
+			font-family: 'Bebas Neue';
+			src: url('./BebasNeue-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		/* Default style for desktop */
+		* {
+			font-family: 'Bebas Neue';
+			margin: 0;
+			padding: 0;
+		}
+		.content{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		body {
+			background-image: url('./form_bg_desktop.png'); /* Background image for desktop */
+			background-size: cover; /* Cover the entire form area */
+			background-position: center center; /* Center the background image */
+			background-repeat: no-repeat; /* Prevent repeating of the background image */
+			width: 100%; /* Adjust the width as needed */
+			height: 100vh; /* Adjust the height as needed */
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #FFFBEA;
+			font-weight: 400;
+		}
+
+		input {
+			border: 0;
+			border-bottom: 1px solid #9784A7;
+			background-color: transparent;
+			width: 830px;
+			font-size: 16px;
+			color: #9784A7;
+			padding: 6px 0;
+
+		}
+		input:focus{
+			background-color: transparent;
+			color: #9784A7;
+		}
+
+		h1 {
+			width: 830px;
+			color: #FFFBEA;
+			font-size: 48px;
+			letter-spacing: 2.4px;
+			font-weight: 400;
+			margin: 0;
+		}
+		h2{
+			margin: 0;
+			padding: 0;
+			margin-top: 31px;
+			color: #BDADCB;
+			width: 830px;
+			font-size: 20px;
+			font-weight: 400;
+			margin-bottom: 36px;
+		}
+
+		label {
+			font-size: 24px;
+			margin-bottom: 18px;
+		}
+
+		.element {
+			padding-top: 40px;
+		}
+
+		/* Centering styles for the form and content */
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Center the button within the form */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center children (button) horizontally */
+}
+
+.button-link {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 252px;
+	height: 67px;
+	background-image: url('./button_bg.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center center;
+	font-size: 32px;
+	margin: 42px 0; /* Adjust top/bottom margin for spacing */
+	border: none;
+	text-decoration: none;
+	color: #2C0068;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+
+
+		/* Tablet style */
+		@media only screen and (min-width: 768px) and (max-width: 1024px) {
+			h1 {
+				width: 564px;
+				margin: 0;
+				padding: 0;
+			}
+			h2{
+				margin-top: 34px;
+			width: 564px;
+			font-size: 20px;
+			margin-bottom: 72px;
+		}
+
+			body {
+				background-image: url('./form_bg_tablet.png'); /* Background image for tablet */
+				background-size: cover; /* Cover the entire form area */
+				background-position: center center; /* Center the background image */
+				background-repeat: no-repeat; /* Prevent repeating of the background image */
+				width: 100%; /* Adjust the width as needed */
+				height: 100vh; /* Adjust the height as needed */
+			}
+
+			input {
+				width: 553px;
+				font-size: 16px;
+						color: #9784A7;
+			}
+
+			label {
+				font-size: 24px;
+			}
+
+			.button-link {
+				margin-top: 90px;
+			}
+		}
+
+		/* Phone style */
+		@media only screen and (max-width: 767px) {
+			h1 {
+				width: 295px;
+				font-size: 24px;
+				margin: 0;
+			}
+			h2{
+				margin-top: 31px;
+			width: 295px;
+				font-size: 14px;
+				color: #BDADCB;
+				letter-spacing: 0.7px;
+				margin-bottom: 36px;
+		}
+
+			body {
+				background-image: url('./form_bg_phone.png'); /* Background image for phone */
+				background-size: cover; /* Cover the entire form area */
+				background-position: center center; /* Center the background image */
+				background-repeat: no-repeat; /* Prevent repeating of the background image */
+				width: 100%; /* Adjust the width as needed */
+				height: 100vh; /* Adjust the height as needed */
+			}
+
+			input {
+				width: 285px;
+				font-size: 14px;
+						color: #9784A7;
+			}
+
+			label {
+				font-size: 16px;
+				margin-bottom: 33px;
+			}
+
+			.element {
+				padding-top: 33px;
+			}
+
+			.button-link {
+				width: 174px;
+				height: 46.26px;
+				font-size: 22.1px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>GET IN TOUCH</h1>
+		<h2>If you have a question or are looking for specific information, please see our contact directory below: info@action-gamesbirthday.com</h2>
+		<form action="#" method="post">
+			<!-- First Name Field -->
+			<div class="element">
+				<label for="first-name">First Name</label><br>
+				<input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+			</div>
+
+			<!-- Last Name Field -->
+			<div class="element">
+				<label for="last-name">Last Name</label><br>
+				<input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+			</div>
+
+			<!-- Phone Number Field -->
+			<div class="element">
+				<label for="phone">Phone Number</label><br>
+				<input type="tel" id="phone" name="phone" placeholder="Phone number" required />
+			</div>
+
+			<!-- Email Field -->
+			<div class="element">
+				<label for="email">Email</label><br>
+				<input type="email" id="email" name="email" placeholder="Email" required />
+			</div>
+
+			<!-- Send Button as Link -->
+			<a href="/" class="button-link">SEND</a>
+		</form>
+	</div>
+</body>
+</html>
