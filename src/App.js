@@ -40,16 +40,21 @@ function App() {
       <header className="App-header">
         {isImageLoaded ? ( // Only render content if the wheel image is loaded
           <>
-            <img className="Top-header" src={top_header} alt="top header" />
+            <img
+  className="Top-header"
+  src={top_header}
+  alt="top header"
+  loading="lazy"
+/>
             <h2 className="Bottom-header">YOUR FAVOURITE GAMES ANNIVERSARY</h2>
             <div className="Image-container">
-              <img
-                src={logo}
-                className="App-logo"
-                alt="logo"
-                style={{ transform: `rotate(${rotation}deg)` }}
-                loading="eager" // Prioritize loading of the wheel image
-              />
+            <img
+  src={logo}
+  className="App-logo"
+  alt="logo"
+  style={{ transform: `rotate(${rotation}deg)` }}
+  loading="eager" // Prioritize loading of the wheel image
+/>
               <img src={overlay} className="App-overlay" alt="overlay" />
             </div>
 
