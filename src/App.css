@@ -243,6 +243,13 @@ body{
     letter-spacing: 1.3px;
     line-height: 31.67px;
   }
+  .image-placeholder {
+    display: inline-block; /* Make sure it occupies space like an image */
+    width: 105px; /* Set the placeholder width */
+    height: auto; /* Allow it to scale */
+    background-color: #f0f0f0; /* Light grey placeholder */
+  }
+  
   .Image-container{
     width: 384.46px;
     height: 384.46px;
