@@ -159,72 +159,6 @@ body{
 .right-image {
   display: none;
 }
-.Image-container {
-  position: relative;
-  width: 100%; /* Make the container take full width */
-  max-width: 634px; /* Maximum width for desktop */
-  aspect-ratio: 1; /* Maintains a 1:1 aspect ratio for the container */
-  overflow: hidden;
-  z-index: 2;
-  margin: 0 auto; /* Center the container */
-  top: -96px;
-}
-
-/* Logo Image */
-.App-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container without distortion */
-  transition: transform 1s ease-in-out; /* Smooth transition for the spin */
-  display: block;
-  pointer-events: none;
-}
-.Top-header {
-  width: 100%; /* Full width of the container */
-  max-width: 768px; /* Maximum width for large screens */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 222;
-  object-fit: cover;
-  top: -18.75px;
-}
-
-.App-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Responsive width */
-  height: 100%; /* Responsive height */
-  pointer-events: none;
-}
-
-.left-image,
-.right-image {
-  display: block;
-  width: 20%; /* Responsive width based on container */
-  max-width: 105px; /* Maximum width */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.App-logo {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
-  transition: transform 1s ease-in-out;
-  pointer-events: none;
-}
-
-/* Image container to maintain aspect ratio */
-.Image-container {
-  position: relative;
-  width: 100%;
-  max-width: 634px;
-  aspect-ratio: 1; /* Ensures the container maintains the ratio */
-  overflow: hidden;
-  z-index: 2;
-  margin: 0 auto;
-  top: -96px;
-}
-
 /*TABLET*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .App{
@@ -282,36 +216,6 @@ body{
     bottom: 0;
     
     height: 327px;
-  }
-  .Image-container {
-    width: 654px; /* Adjust width for tablet */
-    aspect-ratio: 1; /* Maintain 1:1 aspect ratio */
-    margin-top: 246px;
-  }
-
-  .App-overlay {
-    width: 654px;
-    height: 654px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 3;
-  }
-  .Top-header {
-    width: 100%;
-    max-width: 768px;
-    height: auto;
-  }
-  .App-overlay {
-    width: 100%;
-    height: auto;
-  }
-  .left-image,
-  .right-image {
-    width: 15%; /* Adjust width based on container size */
-    max-width: 105px;
   }
 }
 
@@ -405,32 +309,6 @@ body{
   
   bottom: 173.41px;
   width: 105px;
-  height: auto;
-}
-.Image-container {
-  width: 384.46px; /* Adjust width for mobile */
-  aspect-ratio: 1; /* Maintain 1:1 aspect ratio */
-  top: 140px;
-}
-
-.App-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 3;
-}
-.Top-header {
-  width: 100%;
-  height: auto;
-}
-.left-image,
-.right-image {
-  width: 20%;
-  max-width: 105px;
   height: auto;
 }
 }
