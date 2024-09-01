@@ -5,6 +5,8 @@ import overlay from './arrow.png';
 import leftImage from './left-image.png'; // New left-side image
 import rightImage from './right-image.png'; // New right-side image
 import './App.css';
+
+
 function App() {
   const [rotation, setRotation] = useState(0);
   const [spinComplete, setSpinComplete] = useState(false);
@@ -66,22 +68,22 @@ function App() {
               <a href="terms.html">TERMS AND CONDITIONS</a>
               <a href="contact.html">CONTACT US</a>
             </div>
+            {/* Content below the wheel */}
+            <div className="side-images">
+              <img src={leftImage} className="left-image" alt="left-side image" />
+              <img src={rightImage} className="right-image" alt="right-side image" />
+            </div>
           </>
         ) : (
           <p>Loading...</p>
         )}
       </header>
-
-      {/* Placeholder for side images */}
-      <div className="side-images">
-        <div className="image-placeholder left-image"></div>
-        <div className="image-placeholder right-image"></div>
-      </div>
     </div>
   );
 }
 
 export default App;
+
 
 
   // const handleSpin = () => {
