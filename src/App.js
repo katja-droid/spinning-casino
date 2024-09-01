@@ -10,38 +10,16 @@ function App() {
   const [rotation, setRotation] = useState(0);
   const [spinComplete, setSpinComplete] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false); // State to track button disable status
-  const [imagesLoaded, setImagesLoaded] = useState({
-    logo: false,
-    topHeader: false,
-    overlay: false,
-    leftImage: false,
-    rightImage: false,
-  }); // State to track loading of all images
+  const [isImageLoaded, setIsImageLoaded] = useState(false); // State to check if the wheel image is loaded
 
-  // Preload images
+  // Preload the wheel image
   useEffect(() => {
-    const images = {
-      logo: logo,
-      topHeader: top_header,
-      overlay: overlay,
-      leftImage: leftImage,
-      rightImage: rightImage,
+    const preloadImage = new Image();
+    preloadImage.src = logo;
+    preloadImage.onload = () => {
+      setIsImageLoaded(true); // Set the state to true once the image is loaded
     };
-
-    Object.keys(images).forEach((key) => {
-      const img = new Image();
-      img.src = images[key];
-      img.onload = () => {
-        setImagesLoaded((prevState) => ({
-          ...prevState,
-          [key]: true,
-        }));
-      };
-    });
   }, []);
-
-  // Function to check if all images are loaded
-  const allImagesLoaded = Object.values(imagesLoaded).every(Boolean);
 
   // Function to handle spin
   const handleSpin = () => {
@@ -60,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {allImagesLoaded ? ( // Only render content if all images are loaded
+        {isImageLoaded ? ( // Only render content if the wheel image is loaded
           <>
             <img className="Top-header" src={top_header} alt="top header" />
             <h2 className="Bottom-header">YOUR FAVOURITE GAMES ANNIVERSARY</h2>
@@ -94,7 +72,7 @@ function App() {
             </div>
           </>
         ) : (
-          <p>Loading...</p> // Display loading text or spinner until all images are loaded
+          <p>Loading...</p> // Display loading text or spinner until the image is loaded
         )}
       </header>
 
@@ -108,3 +86,15 @@ function App() {
 }
 
 export default App;
+
+  // const handleSpin = () => {
+  //   const degrees = 494;
+  //   const newRotation = rotation + degrees;
+  //   setRotation(newRotation);
+  //   setIsButtonDisabled(true); // Disable the button after clicking    45 90 125 180 225 270 360
+
+  //   setTimeout(() => {
+  //     setSpinComplete(true);
+  //   }, 2000);
+  // };
+  //RANDOM
