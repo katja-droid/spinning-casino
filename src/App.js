@@ -6,28 +6,51 @@ import leftImage from './left-image.png'; // New left-side image
 import rightImage from './right-image.png'; // New right-side image
 import './App.css';
 
-
 function App() {
   const [rotation, setRotation] = useState(0);
   const [spinComplete, setSpinComplete] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false); // State to track button disable status
+  const [imagesLoaded, setImagesLoaded] = useState({
+    logo: false,
+    topHeader: false,
+    overlay: false,
+    leftImage: false,
+    rightImage: false,
+  }); // State to track loading of all images
 
+  // Preload images
   useEffect(() => {
-    const preloadImage = new Image();
-    preloadImage.src = logo;
-    preloadImage.onload = () => {
-      setIsImageLoaded(true);
+    const images = {
+      logo: logo,
+      topHeader: top_header,
+      overlay: overlay,
+      leftImage: leftImage,
+      rightImage: rightImage,
     };
+
+    Object.keys(images).forEach((key) => {
+      const img = new Image();
+      img.src = images[key];
+      img.onload = () => {
+        setImagesLoaded((prevState) => ({
+          ...prevState,
+          [key]: true,
+        }));
+      };
+    });
   }, []);
 
+  // Function to check if all images are loaded
+  const allImagesLoaded = Object.values(imagesLoaded).every(Boolean);
+
+  // Function to handle spin
   const handleSpin = () => {
-    const degreesArray = [134];
-    const randomIndex = Math.floor(Math.random() * degreesArray.length);
-    const degrees = degreesArray[randomIndex];
+    const degreesArray = [134]; // Array of possible degrees
+    const randomIndex = Math.floor(Math.random() * degreesArray.length); // Get a random index
+    const degrees = degreesArray[randomIndex]; // Get the degree from the array
     const newRotation = rotation + degrees;
     setRotation(newRotation);
-    setIsButtonDisabled(true);
+    setIsButtonDisabled(true); // Disable the button after clicking
 
     setTimeout(() => {
       setSpinComplete(true);
@@ -37,7 +60,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {isImageLoaded ? (
+        {allImagesLoaded ? ( // Only render content if all images are loaded
           <>
             <img className="Top-header" src={top_header} alt="top header" />
             <h2 className="Bottom-header">YOUR FAVOURITE GAMES ANNIVERSARY</h2>
@@ -47,15 +70,16 @@ function App() {
                 className="App-logo"
                 alt="logo"
                 style={{ transform: `rotate(${rotation}deg)` }}
-                loading="eager"
+                loading="eager" // Prioritize loading of the wheel image
               />
               <img src={overlay} className="App-overlay" alt="overlay" />
             </div>
+
             {!spinComplete ? (
               <button
                 className="App-button"
                 onClick={handleSpin}
-                disabled={isButtonDisabled}
+                disabled={isButtonDisabled} // Disable the button based on state
               >
                 SPIN
               </button>
@@ -68,32 +92,19 @@ function App() {
               <a href="terms.html">TERMS AND CONDITIONS</a>
               <a href="contact.html">CONTACT US</a>
             </div>
-            {/* Content below the wheel */}
-            <div className="side-images">
-              <img src={leftImage} className="left-image" alt="left-side image" />
-              <img src={rightImage} className="right-image" alt="right-side image" />
-            </div>
           </>
         ) : (
-          <p>Loading...</p>
+          <p>Loading...</p> // Display loading text or spinner until all images are loaded
         )}
       </header>
+
+      {/* Images with fixed positioning */}
+      <div className="side-images">
+        <img src={leftImage} className="left-image" alt="left-side image" />
+        <img src={rightImage} className="right-image" alt="right-side image" />
+      </div>
     </div>
   );
 }
 
 export default App;
-
-
-
-  // const handleSpin = () => {
-  //   const degrees = 494;
-  //   const newRotation = rotation + degrees;
-  //   setRotation(newRotation);
-  //   setIsButtonDisabled(true); // Disable the button after clicking    45 90 125 180 225 270 360
-
-  //   setTimeout(() => {
-  //     setSpinComplete(true);
-  //   }, 2000);
-  // };
-  //RANDOM
