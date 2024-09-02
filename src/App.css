@@ -232,6 +232,8 @@ body{
   .App {
     height: 632px;
     width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
   }
   .Top-header {
     object-fit: fill;
@@ -246,6 +248,14 @@ body{
     width: 384.46px;
     height: 384.46px;
     margin-top: 240px;
+  }
+  .Image-loading-container{
+    width: 384.46px;
+    height: 384.46px;
+    margin-top: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .App-overlay {
     width: 100%;
