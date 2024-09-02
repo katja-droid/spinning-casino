@@ -72,7 +72,15 @@ function App() {
             </div>
           </>
         ) : (
-          <p>Loading...</p> // Display loading text or spinner until the image is loaded
+          <>
+          <div className="Image-container">
+          <p>Loading...</p> 
+          </div>
+            <div className="links">
+            <a href="terms.html">TERMS AND CONDITIONS</a>
+            <a href="contact.html">CONTACT US</a>
+          </div>
+        </>
         )}
       </header>
 
