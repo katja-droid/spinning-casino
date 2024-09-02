@@ -18,7 +18,8 @@
 			margin: 0;
 			padding: 0;
 		}
-		.content{
+
+		.content {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -26,12 +27,12 @@
 		}
 
 		body {
-			background-image: url('./form_bg_desktop.png'); /* Background image for desktop */
-			background-size: cover; /* Cover the entire form area */
-			background-position: center center; /* Center the background image */
-			background-repeat: no-repeat; /* Prevent repeating of the background image */
-			width: 100%; /* Adjust the width as needed */
-			height: 100vh; /* Adjust the height as needed */
+			background-image: url('./form_bg_desktop.png');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100vh;
 			margin: 0;
 			padding: 0;
 			display: flex;
@@ -49,9 +50,9 @@
 			font-size: 16px;
 			color: #9784A7;
 			padding: 6px 0;
-
 		}
-		input:focus{
+
+		input:focus {
 			background-color: transparent;
 			color: #9784A7;
 		}
@@ -62,17 +63,7 @@
 			font-size: 48px;
 			letter-spacing: 2.4px;
 			font-weight: 400;
-			margin: 0;
-		}
-		h2{
-			margin: 0;
-			padding: 0;
-			margin-top: 31px;
-			color: #BDADCB;
-			width: 830px;
-			font-size: 20px;
-			font-weight: 400;
-			margin-bottom: 36px;
+			margin-bottom: 50px;
 		}
 
 		label {
@@ -84,160 +75,118 @@
 			padding-top: 40px;
 		}
 
-		/* Centering styles for the form and content */
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-/* Center the button within the form */
-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center; /* Center children (button) horizontally */
-}
+		.button-link {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 252px;
+			height: 67px;
+			background-image: url('./button_bg.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-position: center center;
+			font-size: 32px;
+			margin: 42px 0;
+			border: none;
+			text-decoration: none;
+			color: #2C0068;
+			cursor: pointer;
+			margin-bottom: 0;
+			opacity: 0.5;
+			pointer-events: none;
+		}
 
-.button-link {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 252px;
-	height: 67px;
-	background-image: url('./button_bg.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-color: transparent;
-	background-position: center center;
-	font-size: 32px;
-	margin: 42px 0; /* Adjust top/bottom margin for spacing */
-	border: none;
-	text-decoration: none;
-	color: #2C0068;
-	cursor: pointer;
-	margin-bottom: 0;
-}
+		.thank-you-message {
+			margin-top: 20px;
+			font-size: 24px;
+			color: #FFFBEA;
+			display: none; /* Initially hidden */
+		}
 
-
-		/* Tablet style */
+		/* Responsive styles (Tablet and Phone) */
 		@media only screen and (min-width: 768px) and (max-width: 1024px) {
-			h1 {
-				width: 564px;
-				margin: 0;
-				padding: 0;
-			}
-			h2{
-				margin-top: 34px;
-			width: 564px;
-			font-size: 20px;
-			margin-bottom: 72px;
+			h1 { width: 564px; margin-bottom: 72px; }
+			body { background-image: url('./form_bg_tablet.png'); }
+			input { width: 553px; }
+			label { font-size: 24px; }
+			.button-link { margin-top: 90px; }
 		}
 
-			body {
-				background-image: url('./form_bg_tablet.png'); /* Background image for tablet */
-				background-size: cover; /* Cover the entire form area */
-				background-position: center center; /* Center the background image */
-				background-repeat: no-repeat; /* Prevent repeating of the background image */
-				width: 100%; /* Adjust the width as needed */
-				height: 100vh; /* Adjust the height as needed */
-			}
-
-			input {
-				width: 553px;
-				font-size: 16px;
-						color: #9784A7;
-			}
-
-			label {
-				font-size: 24px;
-			}
-
-			.button-link {
-				margin-top: 90px;
-			}
-		}
-
-		/* Phone style */
 		@media only screen and (max-width: 767px) {
-			h1 {
-				width: 295px;
-				font-size: 24px;
-				margin: 0;
-			}
-			h2{
-				margin-top: 31px;
-			width: 295px;
-				font-size: 14px;
-				color: #BDADCB;
-				letter-spacing: 0.7px;
-				margin-bottom: 36px;
-		}
-
-			body {
-				background-image: url('./form_bg_phone.png'); /* Background image for phone */
-				background-size: cover; /* Cover the entire form area */
-				background-position: center center; /* Center the background image */
-				background-repeat: no-repeat; /* Prevent repeating of the background image */
-				width: 100%; /* Adjust the width as needed */
-				height: 100vh; /* Adjust the height as needed */
-			}
-
-			input {
-				width: 285px;
-				font-size: 14px;
-						color: #9784A7;
-			}
-
-			label {
-				font-size: 16px;
-				margin-bottom: 33px;
-			}
-
-			.element {
-				padding-top: 33px;
-			}
-
-			.button-link {
-				width: 174px;
-				height: 46.26px;
-				font-size: 22.1px;
-			}
+			h1 { width: 295px; font-size: 24px; margin-bottom: 6px; }
+			body { background-image: url('./form_bg_phone.png'); }
+			input { width: 285px; font-size: 14px; }
+			label { font-size: 16px; margin-bottom: 33px; }
+			.element { padding-top: 33px; }
+			.button-link { width: 174px; height: 46.26px; font-size: 22.1px; }
 		}
 	</style>
 </head>
 <body>
 	<div class="content">
-		<h1>GET IN TOUCH</h1>
-		<h2>If you have a question or are looking for specific information, please see our contact directory below: info@action-gamesbirthday.com</h2>
-		<form action="#" method="post">
-			<!-- First Name Field -->
+		<h1 id="form-header">Fill out the form so we can contact you and give you your prizes</h1>
+		<form id="contactForm">
 			<div class="element">
 				<label for="first-name">First Name</label><br>
 				<input type="text" id="first-name" name="first-name" placeholder="First Name" required />
 			</div>
-
-			<!-- Last Name Field -->
 			<div class="element">
 				<label for="last-name">Last Name</label><br>
 				<input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
 			</div>
-
-			<!-- Phone Number Field -->
 			<div class="element">
 				<label for="phone">Phone Number</label><br>
-				<input type="tel" id="phone" name="phone" placeholder="Phone number" required />
+				<input type="tel" id="phone" name="phone" placeholder="Phone number" pattern="[\d\s()+-]*" required />
 			</div>
-
-			<!-- Email Field -->
 			<div class="element">
 				<label for="email">Email</label><br>
 				<input type="email" id="email" name="email" placeholder="Email" required />
 			</div>
-
-			<!-- Send Button as Link -->
-			<a href="/" class="button-link">SEND</a>
+			<button type="submit" class="button-link" id="submitButton">SEND</button>
 		</form>
+		<div class="thank-you-message" id="thankYouMessage">Thank you! We will contact you soon.</div>
 	</div>
+
+	<script>
+		// JavaScript for Form Validation
+		const form = document.getElementById('contactForm');
+		const submitButton = document.getElementById('submitButton');
+		const thankYouMessage = document.getElementById('thankYouMessage');
+		const formHeader = document.getElementById('form-header');
+
+		// Function to check form validity
+		function checkFormValidity() {
+			if (form.checkValidity()) {
+				submitButton.style.opacity = '1'; // Make button fully visible
+				submitButton.style.pointerEvents = 'auto'; // Enable button
+			} else {
+				submitButton.style.opacity = '0.5'; // Make button semi-transparent
+				submitButton.style.pointerEvents = 'none'; // Disable button
+			}
+		}
+
+		// Event listeners for form fields
+		form.addEventListener('input', checkFormValidity);
+
+		// Handle form submission
+		form.addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent default form submission
+			form.style.display = 'none'; // Hide the form
+			formHeader.style.display = 'none'; // Hide the header
+			thankYouMessage.style.display = 'block'; // Show the thank-you message
+			form.reset(); // Optionally reset the form fields
+			checkFormValidity(); // Recheck form validity to disable the button again
+		});
+
+		// Initial validation check
+		checkFormValidity();
+	</script>
 </body>
 </html>

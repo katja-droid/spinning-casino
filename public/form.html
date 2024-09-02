@@ -18,7 +18,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		.content{
+		.content {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -49,9 +49,8 @@
 			font-size: 16px;
 			color: #9784A7;
 			padding: 6px 0;
-
 		}
-		input:focus{
+		input:focus {
 			background-color: transparent;
 			color: #9784A7;
 		}
@@ -74,41 +73,55 @@
 			padding-top: 40px;
 		}
 
+		.error-message {
+			color: #FF4D4D;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		.thank-you-message {
+			color: #FFFBEA;
+			font-size: 24px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
 		/* Centering styles for the form and content */
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
+		.content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 
-/* Center the button within the form */
-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center; /* Center children (button) horizontally */
-}
+		/* Center the button within the form */
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center children (button) horizontally */
+		}
 
-.button-link {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 252px;
-	height: 67px;
-	background-image: url('./button_bg.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-color: transparent;
-	background-position: center center;
-	font-size: 32px;
-	margin: 42px 0; /* Adjust top/bottom margin for spacing */
-	border: none;
-	text-decoration: none;
-	color: #2C0068;
-	cursor: pointer;
-	margin-bottom: 0;
-}
+		.button-link {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 252px;
+			height: 67px;
+			background-image: url('./button_bg.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-position: center center;
+			font-size: 32px;
+			margin: 42px 0; /* Adjust top/bottom margin for spacing */
+			border: none;
+			text-decoration: none;
+			color: #2C0068;
+			cursor: pointer;
+			margin-bottom: 0;
+		}
 
+		/* Media queries for responsiveness */
 
 		/* Tablet style */
 		@media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -118,6 +131,7 @@ form {
 			}
 
 			body {
+				padding: 10px 0;
 				background-image: url('./form_bg_tablet.png'); /* Background image for tablet */
 				background-size: cover; /* Cover the entire form area */
 				background-position: center center; /* Center the background image */
@@ -129,7 +143,7 @@ form {
 			input {
 				width: 553px;
 				font-size: 16px;
-						color: #9784A7;
+				color: #9784A7;
 			}
 
 			label {
@@ -161,7 +175,7 @@ form {
 			input {
 				width: 285px;
 				font-size: 14px;
-						color: #9784A7;
+				color: #9784A7;
 			}
 
 			label {
@@ -183,35 +197,91 @@ form {
 </head>
 <body>
 	<div class="content">
-		<h1>Fill out the form so we can contact you and give you your prizes</h1>
-		<form action="#" method="post">
+		<h1 id="form-header">Fill out the form so we can contact you and give you your prizes</h1>
+		<form id="prizeForm" onsubmit="return validateForm(event)">
 			<!-- First Name Field -->
 			<div class="element">
 				<label for="first-name">First Name</label><br>
 				<input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+				<div id="first-name-error" class="error-message"></div>
 			</div>
 
 			<!-- Last Name Field -->
 			<div class="element">
 				<label for="last-name">Last Name</label><br>
 				<input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+				<div id="last-name-error" class="error-message"></div>
 			</div>
 
 			<!-- Phone Number Field -->
 			<div class="element">
 				<label for="phone">Phone Number</label><br>
 				<input type="tel" id="phone" name="phone" placeholder="Phone number" required />
+				<div id="phone-error" class="error-message"></div>
 			</div>
 
 			<!-- Email Field -->
 			<div class="element">
 				<label for="email">Email</label><br>
 				<input type="email" id="email" name="email" placeholder="Email" required />
+				<div id="email-error" class="error-message"></div>
 			</div>
 
-			<!-- Send Button as Link -->
-			<a href="/" class="button-link">SEND</a>
+			<!-- Send Button -->
+			<button type="submit" class="button-link">SEND</button>
 		</form>
+		<div id="thank-you-message" class="thank-you-message" style="display: none;">Thank you! Your information has been submitted.</div>
 	</div>
+
+	<script>
+		function validateForm(event) {
+			event.preventDefault(); // Prevent form submission
+
+			let isValid = true;
+
+			// Clear previous error messages
+			document.getElementById('first-name-error').textContent = '';
+			document.getElementById('last-name-error').textContent = '';
+			document.getElementById('phone-error').textContent = '';
+			document.getElementById('email-error').textContent = '';
+
+			// Get form values
+			const firstName = document.getElementById('first-name').value.trim();
+			const lastName = document.getElementById('last-name').value.trim();
+			const phone = document.getElementById('phone').value.trim();
+			const email = document.getElementById('email').value.trim();
+
+			// Validate each field
+			if (firstName === '') {
+				document.getElementById('first-name-error').textContent = 'Enter a valid first name.';
+				isValid = false;
+			}
+			if (lastName === '') {
+				document.getElementById('last-name-error').textContent = 'Enter a valid last name.';
+				isValid = false;
+			}
+
+			const phonePattern = /^[\d\s()+-]*$/; // Loose validation for phone numbers
+			if (!phonePattern.test(phone)) {
+				document.getElementById('phone-error').textContent = 'Enter a valid phone number.';
+				isValid = false;
+			}
+
+			const emailPattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+			if (!emailPattern.test(email)) {
+				document.getElementById('email-error').textContent = 'Enter a valid email address.';
+				isValid = false;
+			}
+
+			// If all fields are valid, display thank-you message and hide the form and header
+			if (isValid) {
+				document.getElementById('prizeForm').style.display = 'none'; // Hide the form
+				document.getElementById('form-header').style.display = 'none'; // Hide the header
+				document.getElementById('thank-you-message').style.display = 'block'; // Show the thank-you message
+			}
+
+			return false; // Prevent default form submission
+		}
+	</script>
 </body>
 </html>
