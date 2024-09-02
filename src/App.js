@@ -73,9 +73,10 @@ function App() {
           </>
         ) : (
           <>
-          <div className="Image-container">
+         
           <div className="Top-header" src={top_header} alt="top header" />
           <h2 className="Bottom-header">YOUR FAVOURITE GAMES ANNIVERSARY</h2>
+          <div className="Image-container">
           <p>Loading...</p> 
           </div>
             <div className="links">
