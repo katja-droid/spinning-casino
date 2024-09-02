@@ -245,7 +245,7 @@ body{
   .Image-container {
     width: 384.46px;
     height: 384.46px;
-    top: 140px;
+    margin-top: 240px;
   }
   .App-overlay {
     width: 100%;
@@ -257,7 +257,7 @@ body{
     z-index: 3;
   }
   .App-button, .App-link {
-    margin-top: 76px;
+    margin-top: -166px;
     width: 133.5px;
     height: 35.49px;
     line-height: normal;
