@@ -249,14 +249,10 @@ body{
     height: 384.46px;
     margin-top: 240px;
   }
-  .Image-loading-container{
-    width: 384.46px;
-    height: 384.46px;
-    margin-top: 240px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .Image-container p{
+    margin: auto auto;
   }
+
   .App-overlay {
     width: 100%;
     height: 100%;
