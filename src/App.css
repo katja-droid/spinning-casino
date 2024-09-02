@@ -226,14 +226,14 @@ body{
     height: 632px;
     width: 100vw;
     max-width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     min-height: 100vh;
   }
   .App {
     height: 632px;
     width: 100vw;
     max-width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .Top-header {
     object-fit: fill;
