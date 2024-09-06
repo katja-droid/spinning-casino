@@ -23,10 +23,10 @@ function App() {
 
   // Function to handle spin
   const handleSpin = () => {
-    const degreesArray = [134]; // Array of possible degrees
+    const degreesArray = [44, 88, 133, 179, 225,  271, 360]; //  44 88 133 179 225  271 360
     const randomIndex = Math.floor(Math.random() * degreesArray.length); // Get a random index
     const degrees = degreesArray[randomIndex]; // Get the degree from the array
-    const newRotation = rotation + degrees;
+    const newRotation = rotation + degrees +360;
     setRotation(newRotation);
     setIsButtonDisabled(true); // Disable the button after clicking
 

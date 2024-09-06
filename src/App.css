@@ -30,7 +30,7 @@ body{
   height: 634px; 
 
   
-  top: -96px;
+  top: -76px;
   z-index: 2;
   overflow: hidden;
 }
@@ -38,6 +38,10 @@ body{
   width: 100%;
   height: 100%;
 
+}
+.App-overlay{
+  width: 100%;
+  height: 100%;
 }
 .Bottom-header{
   z-index: 221;
@@ -87,7 +91,7 @@ body{
 .App-button {
   width: 252px;
   height: 67px;
-  margin-top: -207px;
+  margin-top: -190px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 6000;
@@ -106,29 +110,10 @@ body{
   background-position: center center;
   z-index: 60000;
 }
-.links{
-  
-  display: flex;
-  width: 209px;
-  margin: auto;
-  margin-top: 52px;
-  z-index: 2000;
-  justify-content: space-between;
-}
-.links a{
-  font-family: 'Bebas Neue';
-
-  font-size: 14px;
-  color: #583562;
-  text-decoration: underline;
-  font-weight: bolder;
-  letter-spacing: 0.7px;
-
-}
 .App-link{
   width: 252px;
   height: 67px;
-  margin-top: -207px;
+  margin-top: -190px;
   padding: 10px 20px;
   font-size: 16px;
   z-index: 666;
@@ -152,6 +137,26 @@ body{
   align-items: center;
   z-index: 60000;
 }
+.links{
+  
+  display: flex;
+  width: 209px;
+  margin: auto;
+  margin-top: 52px;
+  z-index: 2000;
+  justify-content: space-between;
+}
+.links a{
+  font-family: 'Bebas Neue';
+
+  font-size: 14px;
+  color: #583562;
+  text-decoration: underline;
+  font-weight: bolder;
+  letter-spacing: 0.7px;
+
+}
+
 .left-image {
   display: none;
 }
@@ -191,7 +196,7 @@ body{
     height: 654px;
     position: absolute;
     top: 50%; /* Adjust this value to set the vertical position */
-    left: 51%; /* Adjust this value to set the horizontal position */
+    left: 50%; /* Adjust this value to set the horizontal position */
     transform: translate(-50%, -50%); /* Center the image within the container */
     pointer-events: none;
     z-index: 3; /* Ensure the overlay is on top of other elements */
@@ -255,19 +260,19 @@ body{
     height: 100%;
     position: absolute;
     top: 50%;
-    left: 51%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
   }
   .App-button, .App-link {
-    margin-top: -166px;
+    margin-top: -146px;
     width: 133.5px;
     height: 35.49px;
     line-height: normal;
     font-size: 16.95px;
   }
   .links {
-    margin-top: 48px;
+    margin-top: 18px;
     z-index: 2000;
     width: 185px;
     letter-spacing: normal;
@@ -275,7 +280,7 @@ body{
   }
   .left-image, .right-image {
     display: block;
-    width: 105px;
+    width: 95px;
     height: auto;
   }
   .side-images {
