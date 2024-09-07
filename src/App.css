@@ -317,11 +317,11 @@ body{
     position: absolute;
   }
   .App-pick{
-    width: 80%;
+    width: 95%;
     margin-left: auto;
     content: url('./pick-up-your-gifts-phone.png');
     z-index: 999999;
-  
+    bottom: 20px;
   }
   .linksTrans a{
     margin-top: 18px;
