@@ -10,7 +10,7 @@
   font-style: normal;
 }
 
-
+/* In your App.css */
 
 body{
   background-image: url('./bg_desktop.png');
@@ -110,32 +110,24 @@ body{
   background-position: center center;
   z-index: 60000;
 }
-.App-link{
-  width: 252px;
-  height: 67px;
-  margin-top: -190px;
-  padding: 10px 20px;
-  font-size: 16px;
-  z-index: 666;
-  cursor: pointer;
-  background-image: url('./button_bg.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  font-family: 'Bebas Neue';
-  color: #2C0068;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 38.4px;
-  letter-spacing: 1.93px;
-  background-position: center center;
-  text-decoration: none;
+
+.App-pick{
+  width: 100%;
   padding: 0;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 60000;
+  align-items: flex-start;
+  overflow: hidden;
+  z-index: 666666;
+}
+.App-pick img{
+  width: 100%;
+}
+.App-pick a{
+  padding: 0;
+  margin: 0;
 }
 .links{
   
@@ -145,6 +137,29 @@ body{
   margin-top: 52px;
   z-index: 2000;
   justify-content: space-between;
+}
+.linksTrans{
+  display: flex;
+  width: 209px;
+  margin: auto;
+  margin-top: 0;
+  z-index: 2000;
+  justify-content: space-between;
+}
+.linksTrans a{
+  
+    font-family: 'Bebas Neue';
+  
+    font-size: 14px;
+    color: transparent;
+    text-decoration: underline;
+    font-weight: bolder;
+    letter-spacing: 0.7px;
+    z-index: -9999;
+    pointer-events: none; /* Prevents the link from being clicked */
+  color: gray; /* Makes the link look disabled */
+  text-decoration: none; /* Optionally removes underline */
+  cursor: not-allowed;
 }
 .links a{
   font-family: 'Bebas Neue';
@@ -170,6 +185,8 @@ body{
   .App{
     height: 1133px;
   }
+
+  
   body{
     background-image: url('./bg_tablet.png');
     height: 1133px;
@@ -201,10 +218,14 @@ body{
     pointer-events: none;
     z-index: 3; /* Ensure the overlay is on top of other elements */
   }
+
   .left-image {
     display: block;
     bottom: 0;
     height: 327px;
+  }
+  .App-pick{
+    content: url('./pick-up-your-gifts-tablet.png');
   }
   .side-images {
     display: flex;
@@ -223,6 +244,7 @@ body{
     
     height: 327px;
   }
+ 
 }
 
 /*PHONE*/
@@ -291,7 +313,22 @@ body{
     height: 173.41px;
     overflow: hidden;
     z-index: 1000;
-    bottom: 173.41px;
-    position: relative;
+    bottom: 0;
+    position: absolute;
   }
+  .App-pick{
+    width: 80%;
+    margin-left: auto;
+    content: url('./pick-up-your-gifts-phone.png');
+    z-index: 999999;
+  
+  }
+  .linksTrans a{
+    margin-top: 18px;
+    z-index: 2000;
+    width: 185px;
+    letter-spacing: normal;
+    color: transparent
+  }
+
 }

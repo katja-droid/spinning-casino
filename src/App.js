@@ -4,6 +4,7 @@ import top_header from './top_header.png';
 import overlay from './arrow.png';
 import leftImage from './left-image.png'; // New left-side image
 import rightImage from './right-image.png'; // New right-side image
+import pickUp from './pick-up-your-gifts.png'; // New right-side image
 import './App.css';
 
 function App() {
@@ -54,22 +55,32 @@ function App() {
             </div>
 
             {!spinComplete ? (
-              <button
-                className="App-button"
-                onClick={handleSpin}
-                disabled={isButtonDisabled} // Disable the button based on state
-              >
-                SPIN
-              </button>
-            ) : (
-              <a href="form.html" className="App-link">
-                TAKE YOUR GIFT
-              </a>
-            )}
-            <div className="links">
-              <a href="terms.html">TERMS AND CONDITIONS</a>
-              <a href="contact.html">CONTACT US</a>
-            </div>
+  <>
+    <button
+      className="App-button"
+      onClick={handleSpin}
+      disabled={isButtonDisabled} // Disable the button based on state
+    >
+      SPIN
+    </button>
+    <div className="links">
+      <a href="terms.html">TERMS AND CONDITIONS</a>
+      <a href="contact.html">CONTACT US</a>
+    </div>
+  </>
+) : (
+  <>
+    <a href="form.html" className="App-pick">
+     <img src={pickUp}></img>
+    </a>
+    <div className="linksTrans">
+      <a href="#">&nbsp;</a>
+      <a href="#">&nbsp;</a>
+    </div>
+  </>
+)}
+
+           
           </>
         ) : (
           <>
