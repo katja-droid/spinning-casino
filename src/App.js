@@ -70,9 +70,12 @@ function App() {
   </>
 ) : (
   <>
-    <a href="form.html" className="App-pick">
-     <img src={pickUp}></img>
+    <a href="form.html" className="App-link">
+     Take your gift
     </a>
+    <div className='App-pick'>
+      <img src={pickUp}></img>
+    </div>
     <div className="linksTrans">
       <a href="#">&nbsp;</a>
       <a href="#">&nbsp;</a>

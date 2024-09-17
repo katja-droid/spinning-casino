@@ -1,4 +1,31 @@
-.App {
+
+.App-link{
+  width: 252px;
+  height: 67px;
+  margin-top: -190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 666;
+  cursor: pointer;
+  background-image: url('./button_bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  font-family: 'Bebas Neue';
+  color: #2C0068;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 38.4px;
+  letter-spacing: 1.93px;
+  background-position: center center;
+  text-decoration: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 600000000;
+}.App {
   text-align: center;
   padding: 0;
   margin: 0;
@@ -10,7 +37,7 @@
   font-style: normal;
 }
 
-/* In your App.css */
+
 
 body{
   background-image: url('./bg_desktop.png');
@@ -84,9 +111,277 @@ body{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.App-button {
+  width: 252px;
+  height: 67px;
+  margin-top: -190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 6000;
+  cursor: pointer;
+  background-image: url('./button_bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  font-family: 'Bebas Neue';
+  color: #2C0068;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 38.4px;
+  letter-spacing: 1.93px;
+  background-position: center center;
+  z-index: 60000;
 }
+.links{
+  
+  display: flex;
+  width: 209px;
+  margin: auto;
+  margin-top: 52px;
+  z-index: 2000;
+  justify-content: space-between;
+}
+.links a{
+  font-family: 'Bebas Neue';
+
+  font-size: 14px;
+  color: #583562;
+  text-decoration: underline;
+  font-weight: bolder;
+  letter-spacing: 0.7px;
+
+}
+
+.left-image {
+  display: none;
+}
+
+/* Positioning for the right-side image */
+.right-image {
+  display: none;
+}
+/*TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .App{
+    height: 1133px;
+  }
+  body{
+    background-image: url('./bg_tablet.png');
+    height: 1133px;
+   
+  }
+  .Top-header{
+    width:768px;
+    margin-top: -5px;
+  }
+  .Bottom-header{
+    margin-top: 34px;
+    font-size: 49px;
+    letter-spacing: 1.7px;
+    line-height: 59.78px;
+    font-weight: 400;
+  }
+  .Image-container{
+    margin-top: 246px;
+    width: 654px;
+    height: 654px;
+  }
+  .App-overlay{
+    width: 654px;
+    height: 654px;
+    position: absolute;
+    top: 50%; /* Adjust this value to set the vertical position */
+    left: 50%; /* Adjust this value to set the horizontal position */
+    transform: translate(-50%, -50%); /* Center the image within the container */
+    pointer-events: none;
+    z-index: 3; /* Ensure the overlay is on top of other elements */
+  }
+  .left-image {
+    display: block;
+    bottom: 0;
+    height: 327px;
+  }
+  .side-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    top: -290px;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  /* Positioning for the right-side image */
+  .right-image {
+    display: block;
+    bottom: 0;
+    
+    height: 327px;
+  }
+}
+
+/*PHONE*/
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url('./bg_phone.png');
+    height: 632px;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  .App {
+    height: 632px;
+    width: 100vw;
+  }
+  .Top-header {
+    object-fit: fill;
+    content: url('./top_header_mobile.svg');
+  }
+  .Bottom-header {
+    margin-top: -9px;
+    font-size: 26.39px;
+    text-align: center;
+  }
+  .Image-container {
+    width: 384.46px;
+    height: 384.46px;
+    margin-top: 240px;
+    color: transparent;
+  }
+  
+  .App-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  .App-button, .App-link {
+    margin-top: -146px;
+    width: 133.5px;
+    height: 35.49px;
+    line-height: normal;
+    font-size: 16.95px;
+  }
+  .links {
+    margin-top: 18px;
+    z-index: 2000;
+    width: 185px;
+    letter-spacing: normal;
+    
+  }
+  .left-image, .right-image {
+    display: block;
+    width: 95px;
+    height: auto;
+  }
+  .side-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 173.41px;
+    overflow: hidden;
+    z-index: 1000;
+    bottom: 173.41px;
+    position: relative;
+  }
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.App {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body{
+  background-image: url('./bg_desktop.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 830px;
+  padding: 0;
+  margin: 0;
+  background-color: #130425;
+
+}
+.Image-container {
+  position: relative;
+
+  width: 634px; /* New width */
+  height: 634px; 
+
+  
+  top: -76px;
+  z-index: 2;
+  overflow: hidden;
+}
+.App-logo{
+  width: 100%;
+  height: 100%;
+
+}
+.App-overlay{
+  width: 100%;
+  height: 100%;
+}
+.Bottom-header{
+  z-index: 221;
+  position: absolute;
+  top: 85.98px;
+  font-family: 'Bebas Neue';
+  bottom: 0;
+  font-size: 46px;
+  letter-spacing: 1.7px;
+  line-height: 59.78px;
+  font-weight: 400;
+  color: #FFFBEA;
+
+}
+.Top-header{
+  z-index: 222;
+  object-fit: cover;
+  top: -18.75px;
+  
+}
+
+.App-logo, .App-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.App-logo {
+  transition: transform 1s ease-in-out; /* Smooth transition for the spin */
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
 
 .App-button {
   width: 252px;
@@ -114,13 +409,14 @@ body{
 .App-pick{
   width: 100%;
   padding: 0;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
   z-index: 666666;
+  transform: translateY(43%);
 }
 .App-pick img{
   width: 100%;
@@ -226,6 +522,7 @@ body{
   }
   .App-pick{
     content: url('./pick-up-your-gifts-tablet.png');
+
   }
   .side-images {
     display: flex;
@@ -322,6 +619,7 @@ body{
     content: url('./pick-up-your-gifts-phone.png');
     z-index: 999999;
     bottom: 20px;
+    transform: translateY(67%);
   }
   .linksTrans a{
     margin-top: 18px;
