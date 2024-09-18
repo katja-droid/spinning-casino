@@ -12,12 +12,20 @@ function App() {
   const [spinComplete, setSpinComplete] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isPickUpLoaded, setIsPickUpLoaded] = useState(false); // Track if pickUp image is loaded
 
   useEffect(() => {
     const preloadImage = new Image();
     preloadImage.src = logo;
     preloadImage.onload = () => {
       setIsImageLoaded(true);
+    };
+
+    // Preload the pickUp image
+    const preloadPickUp = new Image();
+    preloadPickUp.src = pickUp;
+    preloadPickUp.onload = () => {
+      setIsPickUpLoaded(true);
     };
   }, []);
 
@@ -28,7 +36,7 @@ function App() {
     } else {
       document.body.classList.remove('no-scroll');
     }
-    
+
     // Cleanup function to remove the class when component unmounts or when spinComplete changes
     return () => {
       document.body.classList.remove('no-scroll');
@@ -106,12 +114,11 @@ function App() {
         <img src={rightImage} className="right-image" alt="right-side image" />
       </div>
 
-      {/* Overlay that appears after the spin is complete */}
-      {spinComplete && (
+      {/* Overlay that appears after the spin is complete and pickUp image is loaded */}
+      {spinComplete && isPickUpLoaded && (
         <div className="overlay">
           <div className="overlay-content">
-            <h1  className="overlay-header">Come in and pick up your gifts</h1>
-            <img className='overlay-banner' src={pickUp}/>
+            <img className="overlay-banner" src={pickUp} alt="Pick up your prize"/>
             <a href="form.html" className="App-overlay-link">
               Take your gift
             </a>

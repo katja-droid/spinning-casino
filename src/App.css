@@ -176,6 +176,7 @@ body{
   background-image: url('./bg_overlay.png');
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 1000000;
   overflow: hidden;
   
@@ -229,7 +230,6 @@ body{
   width: 334.75px;
 }
 .overlay-banner{
-  margin-top: 5.67vh;
   width: 734.78px;
 }
 /*TABLET*/
@@ -741,7 +741,6 @@ body{
   }
   .overlay-banner{
     width: 110%;
-    margin-top: 13.67vh;
   }
 }
 
