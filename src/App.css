@@ -18,7 +18,7 @@
   font-family: 'Bebas Neue';
   color: #2C0068;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 38.4px;
   letter-spacing: 1.93px;
   background-position: center center;
@@ -28,6 +28,8 @@
   justify-content: center;
   align-items: center;
   z-index: 6000;
+  font-weight: 400;
+
 }.App {
   text-align: center;
   padding: 0;
@@ -355,6 +357,7 @@ body{
     height: 35.49px;
     line-height: normal;
     font-size: 16.95px;
+    font-weight: 400;
   }
   .links {
     margin-top: 18px;
@@ -486,7 +489,7 @@ body{
   font-family: 'Bebas Neue';
   color: #2C0068;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 38.4px;
   letter-spacing: 1.93px;
   background-position: center center;
@@ -676,6 +679,7 @@ body{
     height: 35.49px;
     line-height: normal;
     font-size: 16.95px;
+    font-weight: 400;
   }
   .links {
     margin-top: 18px;
