@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${spinComplete ? 'spin-complete' : ''}`}>
       <header className="App-header">
         {isImageLoaded ? (
           <>
@@ -118,7 +118,7 @@ function App() {
       {spinComplete && isPickUpLoaded && (
         <div className="overlay">
           <div className="overlay-content">
-            <img className="overlay-banner" src={pickUp} alt="Pick up your prize"/>
+            <img className="overlay-banner" src={pickUp} alt="Pick up your prize" />
             <a href="form.html" className="App-overlay-link">
               Take your gift
             </a>

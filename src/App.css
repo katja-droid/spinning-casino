@@ -55,6 +55,35 @@ body{
   background-color: #130425;
 
 }
+.App {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.spin-complete {
+  height: 100vh; /* Set page height to strictly 100vh after spinning */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+  background-image: url('./bg_desktop.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  background-color: #130425;
+  min-height: 100vh;
+}
+
+/* Other styles unchanged */
+
 
 .Image-container {
   position: relative;
@@ -193,6 +222,8 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay-header{
@@ -494,6 +525,9 @@ body{
   letter-spacing: 1.93px;
   background-position: center center;
   z-index: 60000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-pick{
